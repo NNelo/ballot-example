@@ -1,0 +1,21 @@
+#+TITLE: Readme
+
+
+* Votación en Ethereum
+
+* Desarrollo
+- =yarn install= (instala dependencias del proyecto)
+- =yarn run compile= (compila los contratos escritos en Solidity)
+- =yarn run dev= (levanta la página web)
+
+* Carpetas notables
+- =contracts/= (contiene el código fuente de los smart contracts)
+- =build/= (contendrá el resultado de la compilación de los smart contracts)
+
+* Referencias
+** Aplicación de ejemplo
+- [[https://github.com/opengsn/metacoin][GitHub - opengsn/metacoin: Sample project for GSN based on Webpack Truffle Box]]
+** Contrato de ejemplo
+- [[https://docs.soliditylang.org/en/latest/solidity-by-example.html#voting][Solidity by Example — Solidity 0.8.10 documentation]]
+** Documentación
+- [[https://github.com/trufflesuite/truffle/tree/master/packages/contract#api][truffle/packages/contract at master · trufflesuite/truffle · GitHub]]

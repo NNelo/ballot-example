@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ballot Example</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+</head>
+<body>
+
+  <h2>Tu Dirección</h2>
+  <p><b><span id="address">here</span></b><p>
+
+  <h2>Crear una nueva votación</h2>
+  <br><label for="question">Pregunta:</label><br><input type="text" id="question" placeholder="e.g., ¿Qué color preferís?" width="50%"></input>
+  <p><label for="option1">Opción 1:</label><br><input type="text" id="option1" placeholder="e.g., Azul" width="90%"></input>
+  <p><label for="option2">Opción 2:</label><br><input type="text" id="option2" placeholder="e.g., Rojo" width="90%"></input>
+  <br><br><button id="createBallot" onclick="App.createBallot()">Crear Votación</button>
+  <br><br>
+  <span id="deployStatus"></span>
+  <br>
+
+  <h2>Interactuando con una votación</h2>
+  <p><label for="existingBallot">Dirección del contrato:</label><br><input type="text" id="existingBallot" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae" width="90%"></input>
+  <br><br><button id="fetchBallot" onclick="App.fetchBallot()">Leer Votación</button>
+
+  <table>
+    <tr>
+      <th>Opciones</th>
+      <th>Cantidad de votos</th>
+      <th>Votar</th>
+    </tr>
+    <tr>
+      <td><span id="option1name">...</span></td>
+      <td><span id="option1count">...</span></td>
+      <td><button id="option1vote" onClick="App.vote(0)">+1</span></td>
+    </tr>
+    <tr>
+      <td><span id="option2name">...</span></td>
+      <td><span id="option2count">...</span></td>
+      <td><button id="option2vote" onClick="App.vote(1)">+1</span></td>
+    </tr>
+  </table>
+  <br><br>
+  <span id="voteStatus"></span>
+  <br>
+
+</body>
+</html>
