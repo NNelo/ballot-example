@@ -128,6 +128,11 @@ const App = {
     count.innerHTML = rawProposal.voteCount.toString()
   },
 
+  setQuestionTitleStatus: function (questionTitle) {
+    const question = document.getElementById('questionTitle')
+    question.innerHTML = questionTitle
+  },
+
   fetchBallot: function () {
     const self = this
 
@@ -139,6 +144,7 @@ const App = {
 
       existingBallot.question.call().then(function (r) {
         console.log(r)
+        self.setQuestionTitleStatus(r)
       }).catch(function(e) {
         console.log(e)
       })
